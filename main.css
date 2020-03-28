@@ -1,0 +1,34 @@
+body {
+    text-align: center;
+}
+
+.ingredients{
+    display:flex;
+    align-items: center;
+    list-style-type: none;
+    margin-right: 10px;
+}
+
+table, th, td {
+    border: 1px solid black;
+  }
+
+  .table{
+      display: flex;
+      justify-content: center;
+  }
+
+  .searchBar {
+      width: 200px;
+  }
+
+  .ingredients-box{
+      display: flex;
+      text-align: center;
+      justify-content: space-evenly;
+
+  }
+
+  
+
+
