@@ -7,6 +7,7 @@ body {
     align-items: center;
     list-style-type: none;
     margin-right: 10px;
+    
 }
 
 table, th, td {
@@ -18,7 +19,7 @@ table, th, td {
       justify-content: center;
   }
 
-  .searchBar {
+  #searchBar {
       width: 200px;
   }
 
@@ -28,6 +29,8 @@ table, th, td {
       justify-content: space-evenly;
 
   }
+
+  
 
   
 
