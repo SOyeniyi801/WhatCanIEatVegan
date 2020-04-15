@@ -1,0 +1,31 @@
+{
+  "name": "WhatCanIEatVegan",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SOyeniyi801/WhatCanIEatVegan.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SOyeniyi801/WhatCanIEatVegan/issues"
+  },
+  "browserslist": [
+    "last 1 Chrome versions"
+  ],
+  "homepage": "https://github.com/SOyeniyi801/WhatCanIEatVegan#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-transform-runtime": "^7.9.0",
+    "cssnano": "^4.1.10",
+    "parcel-bundler": "^1.12.4"
+  }
+}

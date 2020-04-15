@@ -38,7 +38,7 @@ $(function() {
       const response = await axios.get(url, {
         params: {
           query: query,
-          apiKey: "502be8db956a4d2581735d3ceced3501",
+          apiKey: process.env.SPOONACULAR_API_KEY,
           diet: "vegan"
         }
       });
@@ -63,7 +63,7 @@ $(function() {
 
       const response = await axios.get(url, {
         params: {
-          apiKey: "502be8db956a4d2581735d3ceced3501",
+          apiKey: process.env.SPOONACULAR_API_KEY,
           includeNutrition: true
         }
       });
@@ -78,20 +78,24 @@ $(function() {
   function displayRecipes (recipes) {
     const itemsHtml = recipes.map((recipe) => {
       console.log(recipe)
-      return recipeListItemHtml(recipe.title, "vegan", `${recipe.readyInMinutes} mins`, `${recipe.servings} servings`, recipe.image)
+      return recipeListItemHtml(recipe.title, "vegan", `${recipe.readyInMinutes} mins`, `${recipe.servings} servings`, recipe.image, recipe.sourceUrl)
     })
     console.log(itemsHtml)
     $("tbody").html(itemsHtml)
   }
 
-  function recipeListItemHtml(name, diet, duration, servings, image) {
+  function recipeListItemHtml(name, diet, duration, servings, image, url) {
     return (
       `<tr>
-        <td>${name}</td>
+        <td> 
+          <a href="${url}">${name}</a>
+        </td>
         <td>${diet}</td>
         <td>${duration}</td>
         <td>${servings}</td>
-        <td>${image}</td>
+        <td>
+          <img src="${image}"/>
+        </td>
       </tr>
       `
     )
